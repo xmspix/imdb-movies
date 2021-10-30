@@ -7,18 +7,15 @@ import { observer } from "mobx-react-lite";
 
 const SideBar = () => {
 
-  const Notification = () => {
-    if (
-      store.collection === undefined ||
-      store.collection.length === 0
-    ) {
+  const Notification = observer(() => {
+    if ( store.collection.length === 0) {
       return null;
     } else {
       return (
         <span className="notification">{store.collection.length}</span>
       );
     }
-  };
+  });
 
   const Navigation = () => {
     const nav = [
