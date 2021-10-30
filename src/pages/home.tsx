@@ -1,39 +1,26 @@
 import { observer } from "mobx-react-lite";
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { createApiClient } from "../api";
 import MoviesList from "../components/movies-list";
 import Spinner from "../components/spinner";
 import store from "../store";
 
 const Home = () => {
-  const [state, setState] = useState({
-    movies: [],
-    redirect: false,
-    isLoaded: false
-  });
-
   const api = createApiClient();
 
   useEffect(() => {
-    let isCancelled = false;
-
-    api.featuredMovies().then(res => {
-      console.log(res);
-        setState({ ...state, movies: res, isLoaded: true });
-        store.setMovies(res)
-    })
-
-    return () => {
-      isCancelled = true;
-    };
+    api.featuredMovies().then((res) => {
+      store.setMovies(res);
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  if (!state.isLoaded) {
+  if (!store.movies) {
     return <Spinner />;
   } else {
     return (
       <div className="movies-list">
-        <MoviesList array={state.movies} />
+        <MoviesList array={store.movies} />
       </div>
     );
   }

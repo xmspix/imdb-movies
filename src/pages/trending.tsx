@@ -10,7 +10,6 @@ const Tranding = () => {
   });
 
   useEffect(() => {
-    let isCancelled = false;
 
     fetch("http://localhost:3001/api/trending")
       .then(res => res.json())
@@ -18,9 +17,7 @@ const Tranding = () => {
         setState({ ...state, movies: data, isLoaded: true });
       });
 
-    return () => {
-      isCancelled = true;
-    };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (!state.isLoaded) {

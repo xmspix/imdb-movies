@@ -10,7 +10,7 @@ export const createApiClient = (): ApiClient => {
     return {
         featuredMovies: () =>
             axios
-                .get(`http://localhost:3000/demo/featured-movies`)
+                .get(`http://localhost:3000/featured-movies`)
                 .then((res: any) => res.data)
                 .catch((err: any) => err),
         topMovies: () =>

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { NavLink, Redirect, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Search = () => {
   const [state, setState]:any = useState(false);
