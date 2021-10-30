@@ -16,14 +16,10 @@ class Store {
 
   addToCollection(movie: any) {
     this.collection.push(movie);
-    console.log(movie);
-    
-    console.log(this.collection);
-    
   }
 
   removeFromCollection(id: string) {
-    this.collection.filter((movie: any) => movie.id !== id);
+    this.collection = this.collection.filter((movie: any) => movie.id !== id);
   }
 
   toggleMenu() {
