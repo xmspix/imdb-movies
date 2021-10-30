@@ -4,7 +4,7 @@ import MovieList from "../components/movies-list";
 import store from "../store";
 
 const Collection = () => {
-  if (store.collection.length > 0) {
+  if (store.collection.length === 0) {
     return <div className="center-screen">no collection</div>;
   } else {
     return (
