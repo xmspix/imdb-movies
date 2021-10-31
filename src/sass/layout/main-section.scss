@@ -16,7 +16,8 @@
   }
 
   .movies-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     flex-wrap: wrap;
     padding: 2rem;
     justify-content: center;
