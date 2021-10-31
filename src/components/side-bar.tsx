@@ -20,7 +20,7 @@ const SideBar = () => {
   const Navigation = () => {
     const nav = [
       {
-        text: "All Movies",
+        text: "Featured Movies",
         icon: "icon-videocam",
         link: "/"
       },
