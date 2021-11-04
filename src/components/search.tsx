@@ -1,28 +1,28 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { createApiClient } from "../api";
 
 const Search = () => {
-  const [state, setState]:any = useState(false);
+  const [state, setState]: any = useState([]);
   const searchBox: any = useRef<HTMLDivElement>(null);
 
-  const handleSearch = () => {
-    fetch("http://localhost:3001/api/suggestions/" + searchBox.current.value)
-      .then(res => res.json())
-      .then(data => {
-        setState(data);
-      })
-      .catch(err => {
-        throw err;
-      });
+  const api = createApiClient();
+
+  const handleSearch = async () => {
+    api.search(searchBox.current.value).then((res) => {
+      setState(res.d);
+      console.log(res.d);
+    });
   };
 
   const Results = () => {
+    console.log(state);
     // filter movies only
-    const filter = state.d.filter((itm:any) => itm.q === "feature");
-    return filter.map((itm:any) => (
+    const filter = state.filter((itm: any) => itm.q === "feature");
+    return filter.map((itm: any) => (
       <div className="item-container" key={itm.id}>
         {/* <Link to={`/movie/${itm.id}/${itm.l.replace(/ /g, "-")}`}> */}
-        <Link to={`/movie/${itm.l.replace(/ /g, "-")}`}>
+          <Link to={`/movie/${itm.l.replace(/ /g, "-")}`}>
           <figure className="item">
             {itm.i && <img src={itm.i.imageUrl} alt={itm.l} />}
             <div className="info">

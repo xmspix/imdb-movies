@@ -15,7 +15,7 @@ const MoviesList = ({ array, buttons }:any) => {
 
   return array.map((itm:any, x:number) => (
     <div className="movie-card" key={x}>
-      <Link to={`/movie/${itm.title.toLowerCase().match(/[a-z0-9]+/gi).join('-')}`}>
+      <Link to={`/movie/${itm.seo}`}>
         <div className="movie-card__poster">
           <img
             src={itm.poster.replace("_V1_", "_V1_UX400_CR0,0,_AL_")}

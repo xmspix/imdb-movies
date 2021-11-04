@@ -11,6 +11,8 @@ const Home = () => {
   useEffect(() => {
     api.featuredMovies().then((res) => {
       store.setMovies(res);
+      console.log(res);
+      
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
