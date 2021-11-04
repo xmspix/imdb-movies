@@ -1,5 +1,5 @@
 import React from "react";
-import svg from "../resources/sprite.svg"
+import svg from "../assets/sprite.svg"
 
 export const BtnRemove = ({ cb }:any) => {
   return (

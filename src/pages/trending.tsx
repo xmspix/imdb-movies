@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import MoviesList from "../components/movies-list";
-import Spinner from "../components/spinner";
+import MoviesList from "../components/MoviesList";
+import Spinner from "../components/Spinner";
 
 const Tranding = () => {
   const [state, setState] = useState({

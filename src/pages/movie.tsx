@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import store from "../store";
-import Spinner from "../components/spinner";
-import svg from "../resources/sprite.svg";
+import Spinner from "../components/Spinner";
+import svg from "../assets/sprite.svg";
 import { createApiClient } from "../api";
 import { observer } from "mobx-react-lite";
 

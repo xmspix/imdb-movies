@@ -2,7 +2,7 @@ import React from "react";
 import store from "../store";
 import { Link } from "react-router-dom";
 
-import { BtnRemove, BtnCollection } from "./buttons";
+import { BtnRemove, BtnCollection } from "./Buttons";
 import { observer } from "mobx-react-lite";
 
 const MoviesList = ({ array, buttons }:any) => {

@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Template from "./templates/main";
-import Home from "./pages/home";
-import Movie from "./pages/movie";
-import Collection from "./pages/collection";
-import Trending from "./pages/trending";
+import Template from "./templates";
+import Home from "./pages/Home";
+import Movie from "./pages/Movie";
+import Collection from "./pages/Collection";
+import Trending from "./pages/Trending";
 
 const App = () => {
   return (

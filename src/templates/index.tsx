@@ -1,8 +1,8 @@
 import React from "react";
 
-import SideBar from "../components/side-bar";
-import Search from "../components/search";
-import Menu from "../components/menu";
+import SideBar from "../components/SideBar";
+import Search from "../components/Search";
+import Menu from "../components/Menu";
 
 const Template = (props:any) => {
   return (

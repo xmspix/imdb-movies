@@ -1,8 +1,8 @@
 import { observer } from "mobx-react-lite";
 import React, { useEffect } from "react";
 import { createApiClient } from "../api";
-import MoviesList from "../components/movies-list";
-import Spinner from "../components/spinner";
+import MoviesList from "../components/MoviesList";
+import Spinner from "../components/Spinner";
 import store from "../store";
 
 const Home = () => {

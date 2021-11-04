@@ -1,8 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import store from "../store";
-import profilePic from "../resources/me.png"
-import svg from "../resources/sprite.svg"
+import profilePic from "../assets/me.jpg"
+import svg from "../assets/sprite.svg"
 import { observer } from "mobx-react-lite";
 
 const SideBar = () => {
@@ -24,11 +24,11 @@ const SideBar = () => {
         icon: "icon-videocam",
         link: "/"
       },
-      {
-        text: "Trending Movies",
-        icon: "icon-trending-up",
-        link: "/trending"
-      },
+      // {
+      //   text: "Trending Movies",
+      //   icon: "icon-trending-up",
+      //   link: "/trending"
+      // },
       {
         text: "My Collection",
         icon: "icon-heart-empty",

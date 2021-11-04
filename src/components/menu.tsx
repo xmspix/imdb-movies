@@ -1,6 +1,6 @@
 import React from "react";
 import store from "../store";
-import svg from "../resources/sprite.svg"
+import svg from "../assets/sprite.svg"
 import { observer } from 'mobx-react-lite'
 
 const Menu = () => {

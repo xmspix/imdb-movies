@@ -1,6 +1,6 @@
 import { observer } from "mobx-react-lite";
 import React from "react";
-import MovieList from "../components/movies-list";
+import MovieList from "../components/MoviesList";
 import store from "../store";
 
 const Collection = () => {
