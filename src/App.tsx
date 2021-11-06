@@ -8,7 +8,7 @@ import Trending from "./pages/Trending";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="imdb-movies">
       <Switch>
         <Template>
           <Route path="/" component={Home} exact />
