@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { createApiClient } from "../api";
 
@@ -11,18 +11,14 @@ const Search = () => {
   const handleSearch = async () => {
     api.search(searchBox.current.value).then((res) => {
       setState(res.d);
-      console.log(res.d);
     });
   };
 
   const Results = () => {
-    console.log(state);
-    // filter movies only
     const filter = state.filter((itm: any) => itm.q === "feature");
     return filter.map((itm: any) => (
       <div className="item-container" key={itm.id}>
-        {/* <Link to={`/movie/${itm.id}/${itm.l.replace(/ /g, "-")}`}> */}
-          <Link to={`/movie/${itm.l.replace(/ /g, "-")}`}>
+          <Link to={`/movie/${itm.l.toLowerCase().match(/[a-z0-9]+/gi).join('-')+'-'+itm.id}`}>
           <figure className="item">
             {itm.i && <img src={itm.i.imageUrl} alt={itm.l} />}
             <div className="info">
@@ -39,18 +35,8 @@ const Search = () => {
 
   return (
     <div className="autocomplete">
-      <input
-        type="text"
-        placeholder="Search..."
-        className="search"
-        ref={searchBox}
-        onChange={() => handleSearch()}
-      />
-      {state ? (
-        <div className="autocomplete-items">
-          <Results />
-        </div>
-      ) : null}
+      <input type="text" placeholder="Search..." className="search" ref={searchBox} onChange={() => handleSearch()}/>
+      {state ? (<div className="autocomplete-items"><Results /></div>) : null}
     </div>
   );
 };
