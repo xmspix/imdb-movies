@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/imdb-movies/static/css/main.5fc3d9d2.chunk.css",
-    "main.js": "/imdb-movies/static/js/main.c80aedf4.chunk.js",
-    "main.js.map": "/imdb-movies/static/js/main.c80aedf4.chunk.js.map",
+    "main.js": "/imdb-movies/static/js/main.c0bac969.chunk.js",
+    "main.js.map": "/imdb-movies/static/js/main.c0bac969.chunk.js.map",
     "runtime-main.js": "/imdb-movies/static/js/runtime-main.71c1c009.js",
     "runtime-main.js.map": "/imdb-movies/static/js/runtime-main.71c1c009.js.map",
     "static/js/2.2837bcff.chunk.js": "/imdb-movies/static/js/2.2837bcff.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.71c1c009.js",
     "static/js/2.2837bcff.chunk.js",
     "static/css/main.5fc3d9d2.chunk.css",
-    "static/js/main.c80aedf4.chunk.js"
+    "static/js/main.c0bac969.chunk.js"
   ]
 }
